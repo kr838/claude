@@ -1,0 +1,1 @@
+"""Example legacy module package."""

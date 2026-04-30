@@ -1,0 +1,76 @@
+{
+  "deprecated_logger": {
+    "target_api": "deprecated_logger",
+    "direct_callers": [
+      "build_report_line",
+      "compute_invoice_total"
+    ],
+    "direct_callees": [
+      "print"
+    ],
+    "downstream_nodes": [
+      "print"
+    ],
+    "upstream_nodes": [
+      "build_report_line",
+      "compute_invoice_total",
+      "process_order"
+    ],
+    "all_affected": [
+      "build_report_line",
+      "compute_invoice_total",
+      "deprecated_logger",
+      "print",
+      "process_order"
+    ],
+    "covered_functions": [
+      "compute_invoice_total",
+      "process_order"
+    ],
+    "uncovered_functions": [
+      "build_report_line",
+      "deprecated_logger",
+      "print"
+    ],
+    "score": {
+      "direct_change_complexity": 60.0,
+      "downstream_impact": 36.0,
+      "test_gap": 60.0,
+      "total": 50.4,
+      "level": "MEDIUM"
+    },
+    "reasoning_summary": "Target deprecated_logger has 3 direct links, 1 downstream, 3 upstream, uncovered ratio 60.00%."
+  },
+  "old_finance_calc": {
+    "target_api": "old_finance_calc",
+    "direct_callers": [
+      "compute_invoice_total"
+    ],
+    "direct_callees": [],
+    "downstream_nodes": [],
+    "upstream_nodes": [
+      "compute_invoice_total",
+      "process_order"
+    ],
+    "all_affected": [
+      "compute_invoice_total",
+      "old_finance_calc",
+      "process_order"
+    ],
+    "covered_functions": [
+      "compute_invoice_total",
+      "process_order"
+    ],
+    "uncovered_functions": [
+      "old_finance_calc"
+    ],
+    "score": {
+      "direct_change_complexity": 20.0,
+      "downstream_impact": 16.0,
+      "test_gap": 33.33,
+      "total": 21.73,
+      "level": "LOW"
+    },
+    "reasoning_summary": "Target old_finance_calc has 1 direct links, 0 downstream, 2 upstream, uncovered ratio 33.33%."
+  }
+}
